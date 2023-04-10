@@ -1,0 +1,5 @@
+const Role = {
+    ROLE_AUTHOR: 'ROLE_AUTHOR',
+    ROLE_ADMIN: 'ROLE_ADMIN',
+    ROLE_SUPER: 'ROLE_SUPER'
+  };
