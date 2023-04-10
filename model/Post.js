@@ -216,6 +216,37 @@ class Post {
    setNumberOfReports(numberOfReports) { 
      this.numberOfReports = numberOfReports; 
    }
+   getType() { 
+     return this.type; 
+ } 
+  
+ setType(type) { 
+     this.type = type; 
+ } 
+  
+ getTag() { 
+     return this.tag; 
+ } 
+  
+ setTag(tag) { 
+     this.tag = tag; 
+ } 
+  
+ toString() { 
+     return "Post{" + 
+             "id=" + this.id + 
+             ", postText='" + this.postText + '\'' + 
+             ", isExperience='" + this.isExperience + '\'' + 
+             ", likes=" + this.likes + 
+             ", dislikes=" + this.dislikes + 
+             ", visible='" + this.visible + '\'' + 
+             ", verified='" + this.verified + '\'' + 
+             ", user=" + this.user + 
+             ", country=" + this.country + 
+             ", type=" + this.type + 
+             ",tag=" + this.tag + 
+             ", postRating=" + this.postRating + "}"; 
+ }
 }
 
 module.exports = Post;
