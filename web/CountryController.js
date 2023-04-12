@@ -3,8 +3,8 @@ const express = require("express");
 const router = express.Router();
 
 // Import service and model
-const CountryService = require("./services/CountryService");
-const Country = require("./models/Country");
+// const CountryService = require("./services/CountryService");
+const Country = require("../model/Country");
 
 // Create instance of service
 const countryService = new CountryService();

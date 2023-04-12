@@ -20,11 +20,11 @@ const storage = multer.diskStorage({
 const upload = multer({ storage: storage });
 
 // Import services and repositories
-const PostService = require('./services/PostService');
-const UserService = require('./services/UserService');
-const FileService = require('./services/FileService');
-const MediaRepository = require('./repositories/MediaRepository');
-const PostRepository = require('./repositories/PostRepository');
+// const PostService = require('../service/PostService');
+// const UserService = require('../services/UserService');
+// const FileService = require('../services/FileService');
+// const MediaRepository = require('../repositories/MediaRepository');
+// const PostRepository = require('../repositories/PostRepository');
 
 // Create instances of services and repositories
 const postService = new PostService(PostRepository, MediaRepository);

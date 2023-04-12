@@ -18,10 +18,10 @@ async function findById(id) {
   return tag;
 }
 
-async function findByTag(tag) {
+async function findByTag(t) {
   const tag = await Tag.findOne({
     where: {
-      tag
+      tag: t
     }
   });
   return tag;

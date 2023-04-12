@@ -2,7 +2,7 @@
 //Plain Javascript and Node.js is supported
 // html/css is not supported here 
 
-const Visible = require('./Visible');
+const Visible = require('../model/Visible');
 
 class CreatePostDTO {
   constructor(visible, country, tag, type, rating, postText, isExperience) {

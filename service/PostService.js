@@ -1,12 +1,12 @@
-const PostRepository = require('./PostRepository');
-const CommentRepository = require('./CommentRepository');
-const CountryRepository = require('./CountryRepository');
-const TagRepository = require('./TagRepository');
-const TypeRepository = require('./TypeRepository');
-const UserRepository = require('./UserRepository');
-const RequestServiceImpl = require('./RequestServiceImpl');
-const LomyVerifiedRepository = require('./LomyVerifiedRepository');
-const IPLogRepository = require('./IPLogRepository');
+// const PostRepository = require('../repository/PostRepository');
+const CommentRepository = require('../repository/CommentRepository');
+const CountryRepository = require('../repository/CountryRepository');
+const TagRepository = require('../repository/TagRepository');
+const TypeRepository = require('../repository/TypeRepository');
+const UserRepository = require('../repository/UserRepository');
+const RequestServiceImpl = require('../repository/RequestServiceImpl');
+const LomyVerifiedRepository = require('../repository/LomyVerifiedRepository');
+const IPLogRepository = require('../repository/IPLogRepository');
 
 class PostService {
   constructor() {

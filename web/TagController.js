@@ -5,14 +5,14 @@ const jwt = require("jsonwebtoken");
 const router = express.Router();
 
 // Import service and model
-const TagService = require("./services/TagService");
-const UserService = require("./services/UserService");
-const Tag = require("./models/Tag");
-const User = require("./models/User");
+// const TagService = require("./services/TagService");
+// const UserService = require("./services/UserService");
+// const Tag = require("./models/Tag");
+// const User = require("./models/User");
 
 // Create instances of service
-const tagService = new TagService();
-const userService = new UserService();
+// const tagService = new TagService();
+// const userService = new UserService();
 
 // Define routes
 router.post("/", async (req, res) => {

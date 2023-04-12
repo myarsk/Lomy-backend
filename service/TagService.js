@@ -2,9 +2,9 @@
 //Plain Javascript and Node.js is supported
 // html/css is not supported here 
 
-const TagRepository = require('./TagRepository');
-const UserRepository = require('./UserRepository');
-const LomyVerifiedRepository = require('./LomyVerifiedRepository');
+const TagRepository = require('../repository/TagRepository');
+const UserRepository = require('../repository/UserRepository');
+const LomyVerifiedRepository = require('../repository/LomyVerifiedRepository');
 
 class TagService {
   constructor() {

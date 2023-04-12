@@ -2,7 +2,7 @@
 //Plain Javascript and Node.js is supported
 // html/css is not supported 
 
-const CountryRepository = require('./CountryRepository');
+const CountryRepository = require('../repository/CountryRepository');
 
 class CountryService {
   constructor() {
