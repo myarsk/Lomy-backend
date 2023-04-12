@@ -126,11 +126,11 @@ const UserService = {
     }
     return objects;
   }
-  const jwtProvider = require('./jwtProvider');
-  const IPLog = require('./IPLog');
-  const ActivityType = require('./ActivityType');
-  const ipLogRepository = require('./ipLogRepository');
-  const requestService = require('./requestService');
+  const jwtProvider = require('../security/JwtProvider');
+  const IPLog = require('../model/IPLog');
+  const ActivityType = require('../model/ActivityType');
+  const ipLogRepository = require('../repository/IPLogRepository');
+  const requestService = require('../security/RequestService');
   
   exports.authenticate = function(username, password, httpServletRequest) {
     let objects = [];

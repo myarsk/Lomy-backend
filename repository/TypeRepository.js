@@ -18,10 +18,10 @@ async function findById(id) {
   return type;
 }
 
-async function findByType(type) {
+async function findByType(t) {
   const type = await Type.findOne({
     where: {
-      type
+      type: t
     }
   });
   return type;

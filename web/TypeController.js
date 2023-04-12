@@ -3,11 +3,11 @@ const express = require("express");
 const router = express.Router();
 
 // Import service and model
-const TypeService = require("./services/TypeService");
-const Type = require("./models/Type");
+// const TypeService = require("./services/TypeService");
+// const Type = require("./models/Type");
 
 // Create instance of service
-const typeService = new TypeService();
+// const typeService = new TypeService();
 
 // Define routes
 router.post("/", async (req, res) => {

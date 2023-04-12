@@ -1,72 +1,72 @@
 // node.js module that exports a class called Post
-class Post {
-    constructor(
-      id,
-      postText,
-      isExperience,
-      likes,
-      dislikes,
-      visible,
-      verified,
-      tag,
-      user,
-      country,
-      type,
-      numberOfReports,
-      postRating,
-      postDate,
-      postStatus,
-      media
-    ) {
-      this.id = id;
-      this.postText = postText;
-      this.isExperience = isExperience;
-      this.likes = likes;
-      this.dislikes = dislikes;
-      this.visible = visible;
-      this.verified = verified;
-      this.tag = tag;
-      this.user = user;
-      this.country = country;
-      this.type = type;
-      this.numberOfReports = numberOfReports;
-      this.postRating = postRating;
-      this.postDate = postDate;
-      this.postStatus = postStatus;
-      this.media = media;
-  
-      // transient properties
-      this.isAuthor = false;
-      this.isLiked = false;
-      this.isDisliked = false;
-      
-    }
-  
-    // getters and setters for transient properties
-    getAuthor() {
-      return this.isAuthor;
-    }
-  
-    setAuthor(author) {
-      this.isAuthor = author;
-    }
-  
-    getLiked() {
-      return this.isLiked;
-    }
-  
-    setLiked(liked) {
-      this.isLiked = liked;
-    }
-  
-    getDisliked() {
-      return this.isDisliked;
-    }
-  
-    setDisliked(disliked) {
-      this.isDisliked = disliked;
-    }
-  }
+// class Post {
+//     constructor(
+//       id,
+//       postText,
+//       isExperience,
+//       likes,
+//       dislikes,
+//       visible,
+//       verified,
+//       tag,
+//       user,
+//       country,
+//       type,
+//       numberOfReports,
+//       postRating,
+//       postDate,
+//       postStatus,
+//       media
+//     ) {
+//       this.id = id;
+//       this.postText = postText;
+//       this.isExperience = isExperience;
+//       this.likes = likes;
+//       this.dislikes = dislikes;
+//       this.visible = visible;
+//       this.verified = verified;
+//       this.tag = tag;
+//       this.user = user;
+//       this.country = country;
+//       this.type = type;
+//       this.numberOfReports = numberOfReports;
+//       this.postRating = postRating;
+//       this.postDate = postDate;
+//       this.postStatus = postStatus;
+//       this.media = media;
+//
+//       // transient properties
+//       this.isAuthor = false;
+//       this.isLiked = false;
+//       this.isDisliked = false;
+//
+//     }
+//
+//     // getters and setters for transient properties
+//     getAuthor() {
+//       return this.isAuthor;
+//     }
+//
+//     setAuthor(author) {
+//       this.isAuthor = author;
+//     }
+//
+//     getLiked() {
+//       return this.isLiked;
+//     }
+//
+//     setLiked(liked) {
+//       this.isLiked = liked;
+//     }
+//
+//     getDisliked() {
+//       return this.isDisliked;
+//     }
+//
+//     setDisliked(disliked) {
+//       this.isDisliked = disliked;
+//     }
+//   }
     //TODO Add createDate field
 class Post {
   constructor(
@@ -216,37 +216,6 @@ class Post {
    setNumberOfReports(numberOfReports) { 
      this.numberOfReports = numberOfReports; 
    }
-   getType() { 
-     return this.type; 
- } 
-  
- setType(type) { 
-     this.type = type; 
- } 
-  
- getTag() { 
-     return this.tag; 
- } 
-  
- setTag(tag) { 
-     this.tag = tag; 
- } 
-  
- toString() { 
-     return "Post{" + 
-             "id=" + this.id + 
-             ", postText='" + this.postText + '\'' + 
-             ", isExperience='" + this.isExperience + '\'' + 
-             ", likes=" + this.likes + 
-             ", dislikes=" + this.dislikes + 
-             ", visible='" + this.visible + '\'' + 
-             ", verified='" + this.verified + '\'' + 
-             ", user=" + this.user + 
-             ", country=" + this.country + 
-             ", type=" + this.type + 
-             ",tag=" + this.tag + 
-             ", postRating=" + this.postRating + "}"; 
- }
 }
 
 module.exports = Post;

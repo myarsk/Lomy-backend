@@ -26,10 +26,10 @@ async function deleteById(id) {
   });
 }
 
-async function findByCountry(country) {
+async function findByCountry(c) {
   const country = await Country.findOne({
     where: {
-      country
+      country: c
     }
   });
   return country;

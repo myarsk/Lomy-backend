@@ -2,10 +2,11 @@
 //Plain Javascript and Node.js is supported
 // html/css is not supported here 
 
+let roles = ['user'];
 // Node.js version
 const jwt = require('jsonwebtoken');
 const { Base64 } = require('js-base64');
-const { SimpleGrantedAuthority } = require('spring-security-core');
+// const { SimpleGrantedAuthority } = require('spring-security-core');
 
 class JwtProvider {
   constructor(secretKey, validityInMilliseconds) {
@@ -17,7 +18,7 @@ class JwtProvider {
   createToken(username, roles) {
     const claims = {
       sub: username,
-      roles: roles.map(role => new SimpleGrantedAuthority(role.authority))
+      roles: roles.map(role => role[0])
     };
     const now = new Date();
     const expiresAt = new Date(now.getTime() + this.validityInMilliseconds);

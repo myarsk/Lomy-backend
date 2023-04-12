@@ -3,7 +3,7 @@ const express = require("express");
 const router = express.Router();
 
 // Import service
-const AddService = require("./services/AddService");
+// const AddService = require("../service/AddService");
 
 // Create instance of service
 const addService = new AddService();

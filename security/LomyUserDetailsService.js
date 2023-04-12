@@ -1,9 +1,9 @@
 //Node.js 10.14.0
 //Plain Javascript and Node.js is supported
 // Node.js version
-const UserRepository = require('./UserRepository');
+// const UserRepository = require('./UserRepository');
 const JwtProvider = require('./JwtProvider');
-const { withUsername } = require('spring-security-core');
+// const { withUsername } = require('spring-security-core');
 
 class LomyUserDetailsService {
   constructor() {
@@ -18,7 +18,7 @@ class LomyUserDetailsService {
       throw new UsernameNotFoundException(`User with name ${s} doesn't exist`);
     }
 
-    return withUsername(user.getUserName())
+    user.getUserName()
       .password(user.getPassword())
       .authorities(user.getRoles())
       .accountExpired(false)
