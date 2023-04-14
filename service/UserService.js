@@ -1,14 +1,5 @@
-const UserService = {
-  userRepository: null,
-  ipLogRepository: null,
-  authenticationManager: null,
-  roleRepository: null,
-  passwordEncoder: null,
-  jwtProvider: null,
-  requestService: null,
-  javaMailSender: null,
-
-  init(userRepository, authenticationManager, javaMailSender, ipLogRepository, roleRepository, passwordEncoder, jwtProvider, requestService) {
+class UserService {
+  constructor(userRepository, authenticationManager, javaMailSender, ipLogRepository, roleRepository, passwordEncoder, jwtProvider, requestService) {
     this.userRepository = userRepository;
     this.authenticationManager = authenticationManager;
     this.roleRepository = roleRepository;
@@ -18,25 +9,35 @@ const UserService = {
     this.javaMailSender = javaMailSender;
     this.requestService = requestService;
     this.createSuperUser();
-  },
+  }
 
   createSuperUser() {
-    this.roleRepository.findUserRoleByRoleName("ROLE_SUPER", (err, role) => {
-      if (err) {
-        // handle error
-      } else if (!role) {
-        this.roleRepository.save(new UserRole("ROLE_SUPER", "ROLE_SUPER"), (err, role) => {
-          if (err) {
-            // handle error
-          } else {
-            this.createSuperUserWithRole(role);
-          }
-        });
-      } else {
-        this.createSuperUserWithRole(role);
-      }
-    });
-  },
+    if (this.roleRepository) {
+      this.roleRepository.findUserRoleByRoleName("ROLE_SUPER", (err, role) => {
+        if (err) {
+          // handle error
+        } else if (!role) {
+          this.roleRepository.save(new UserRole("ROLE_SUPER", "ROLE_SUPER"), (err, role) => {
+            if (err) {
+              // handle error
+            } else {
+              this.createSuperUserWithRole(role);
+            }
+          });
+        } else {
+          this.createSuperUserWithRole(role);
+        }
+      });
+    } else {
+      // Handle error
+    }
+  }
+
+  createSuperUserWithRole(role) {
+    // Create a super user with the given role
+  }
+
+
 
   createSuperUserWithRole(role) {
     let roles = [];
@@ -51,7 +52,7 @@ const UserService = {
           } else {
             roles.push(adminRole);
             roles.push(role);
-            let user = new User("SUPER_MANAGER", "$2a$13$M0v0g9XA7NETbB/I7SodkOcx2mugp4LuoDxMt/ck1b2JxaA8K5ja.", roles, "qqq123@gmail.com");
+            let user = new user("KH@LIL", "P@ssw0rd.2023", roles, "qqq123@gmail.com");
             user.setActivated(true);
             this.userRepository.save(user);
           }
@@ -126,11 +127,11 @@ const UserService = {
     }
     return objects;
   }
-  const jwtProvider = require('./jwtProvider');
-  const IPLog = require('./IPLog');
-  const ActivityType = require('./ActivityType');
-  const ipLogRepository = require('./ipLogRepository');
-  const requestService = require('./requestService');
+  const jwtProvider = require('../security/JwtProvider');
+  const IPLog = require('../model/IPLog');
+  const ActivityType = require('../model/ActivityType');
+  const ipLogRepository = require('../repository/IPLogRepository');
+  const requestService = require('../security/RequestService');
   
   exports.authenticate = function(username, password, httpServletRequest) {
     let objects = [];
@@ -148,4 +149,5 @@ const UserService = {
     });
     return objects;
   };
+  
 module.exports = UserService;

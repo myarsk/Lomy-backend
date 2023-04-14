@@ -3,8 +3,8 @@ const express = require("express");
 const router = express.Router();
 
 // Import service and model
-const CountryService = require("./services/CountryService");
-const Country = require("./models/Country");
+ const CountryService = require("../service/CountryService");
+const Country = require("../model/Country");
 
 // Create instance of service
 const countryService = new CountryService();
@@ -16,7 +16,7 @@ router.post("/", async (req, res) => {
     // Get the country data from the request body
     const countryDTO = req.body;
 
-    // Create a country object and save it to the database
+    // Create a country object and save it to the lomyvijb_lomy
     const country = new Country(countryDTO.name, countryDTO.code);
     await countryService.addCountry(country);
 
@@ -30,7 +30,7 @@ router.post("/", async (req, res) => {
 router.get("/getCountries", async (req, res) => {
   // Get all countries
   try {
-    // Get all countries from the database
+    // Get all countries from the lomyvijb_lomy
     const countries = await countryService.getCountries();
 
     // Return the countries

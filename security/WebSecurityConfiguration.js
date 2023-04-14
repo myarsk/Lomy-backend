@@ -2,9 +2,9 @@
 //Plain Javascript and Node.js is supported
 // html/css is not supported here 
 
-const UserRoleRepository = require('path/to/UserRoleRepository');
-const LomyUserDetailsService = require('path/to/LomyUserDetailsService');
-const JwtTokenFilter = require('path/to/JwtTokenFilter');
+const UserRoleRepository = require('../repository/UserRoleRepository');
+const LomyUserDetailsService = require('../security/LomyUserDetailsService');
+const JwtTokenFilter = require('../security/JwtTokenFilter');
 const BCryptPasswordEncoder = require('bcryptjs');
 
 class WebSecurityConfiguration {

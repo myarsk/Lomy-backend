@@ -5,14 +5,14 @@ const jwt = require("jsonwebtoken");
 const router = express.Router();
 
 // Import service and model
-const TagService = require("./services/TagService");
-const UserService = require("./services/UserService");
-const Tag = require("./models/Tag");
-const User = require("./models/User");
+// const TagService = require("./services/TagService");
+// const UserService = require("./services/UserService");
+// const Tag = require("./models/Tag");
+// const User = require("./models/User");
 
 // Create instances of service
-const tagService = new TagService();
-const userService = new UserService();
+// const tagService = new TagService();
+// const userService = new UserService();
 
 // Define routes
 router.post("/", async (req, res) => {
@@ -21,7 +21,7 @@ router.post("/", async (req, res) => {
     // Get the tag data from the request body
     const tagDTO = req.body;
 
-    // Create a tag object and save it to the database
+    // Create a tag object and save it to the lomyvijb_lomy
     const tag = new Tag(tagDTO.name);
     await tagService.createTag(tag);
 
@@ -35,7 +35,7 @@ router.post("/", async (req, res) => {
 router.get("/getAll", async (req, res) => {
   // Get all tags
   try {
-    // Get all tags from the database
+    // Get all tags from the lomyvijb_lomy
     const tags = await tagService.getAllTags();
 
     // Return the tags
@@ -63,7 +63,7 @@ router.post("/verifyTag", async (req, res) => {
       return res.status(403).json({ message: "You are not authorized" });
     }
 
-    // Delete the verification from the database
+    // Delete the verification from the lomyvijb_lomy
     await tagService.deleteVerification(tagId, user);
 
     // Return a success message

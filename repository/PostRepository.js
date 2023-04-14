@@ -1,4 +1,4 @@
-const Post = require('./model/post');
+const Post = require('../model/post');
 const { Op } = require('sequelize');
 
 async function findPostById(postId) {
@@ -72,13 +72,13 @@ async function findPostsByCountryAndType(isExperience, country, type, postStatus
   return posts;
 }
 const { Sequelize, Model, DataTypes } = require('sequelize');
-const sequelize = new Sequelize('database', 'username', 'password', {
+const sequelize = new Sequelize('lomyvijb_lomy', 'lomyvijb_admin', 'NpNEZ3GFT6cF2jR', {
   host: 'localhost',
   dialect: 'mysql'
 });
 
-class Post extends Model {}
-Post.init({
+class Po extends Model {}
+Po.init({
   isExperience: DataTypes.BOOLEAN,
   postStatus: DataTypes.INTEGER,
   tag: DataTypes.STRING,

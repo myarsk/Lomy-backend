@@ -5,8 +5,7 @@ const AdMediaRepository = require("../repository/AdMediaRepository"); // Assumin
 // Define a service class
 class AddService {
   constructor() {
-    // Create an instance of the repository
-    this.adMediaRepository = new AdMediaRepository();
+    // No need to create an instance of the repository since we are using exported functions directly
   }
 
   // Define a method that creates an ad media

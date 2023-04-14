@@ -5,7 +5,7 @@
 // Node.js version
 const logger = require('log4js').getLogger('JwtTokenFilter');
 const LomyUserDetailsService = require('./LomyUserDetailsService');
-const { SecurityContextHolder, PreAuthenticatedAuthenticationToken } = require('spring-security-core');
+// const { SecurityContextHolder, PreAuthenticatedAuthenticationToken } = require('spring-security-core');
 
 class JwtTokenFilter {
   constructor(userDetailsService) {

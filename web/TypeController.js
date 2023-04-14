@@ -3,11 +3,11 @@ const express = require("express");
 const router = express.Router();
 
 // Import service and model
-const TypeService = require("./services/TypeService");
-const Type = require("./models/Type");
+// const TypeService = require("./services/TypeService");
+// const Type = require("./models/Type");
 
 // Create instance of service
-const typeService = new TypeService();
+// const typeService = new TypeService();
 
 // Define routes
 router.post("/", async (req, res) => {
@@ -16,7 +16,7 @@ router.post("/", async (req, res) => {
     // Get the type data from the request body
     const typeDTO = req.body;
 
-    // Create a type object and save it to the database
+    // Create a type object and save it to the lomyvijb_lomy
     const type = new Type(typeDTO.name);
     await typeService.createType(type);
 
@@ -30,7 +30,7 @@ router.post("/", async (req, res) => {
 router.get("/getTypes", async (req, res) => {
   // Get all types
   try {
-    // Get all types from the database
+    // Get all types from the lomyvijb_lomy
     const types = await typeService.getTypes();
 
     // Return the types

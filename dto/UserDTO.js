@@ -1,4 +1,4 @@
-const Role = require('./Role');
+const Role = require('../model/Role');
 
 class UserDTO {
   constructor(userName, password, email) {

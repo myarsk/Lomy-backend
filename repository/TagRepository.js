@@ -1,5 +1,5 @@
 const { Sequelize, Model, DataTypes } = require('sequelize');
-const sequelize = new Sequelize('database', 'username', 'password', {
+const sequelize = new Sequelize('lomyvijb_lomy', 'lomyvijb_admin', 'NpNEZ3GFT6cF2jR', {
   host: 'localhost',
   dialect: 'mysql'
 });
@@ -18,10 +18,10 @@ async function findById(id) {
   return tag;
 }
 
-async function findByTag(tag) {
+async function findByTag(t) {
   const tag = await Tag.findOne({
     where: {
-      tag
+      tag: t
     }
   });
   return tag;

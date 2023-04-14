@@ -3,7 +3,7 @@ const express = require("express");
 const router = express.Router();
 
 // Import service
-const AddService = require("./services/AddService");
+ const AddService = require("../service/AddService");
 
 // Create instance of service
 const addService = new AddService();
@@ -15,7 +15,7 @@ router.post("/create", async (req, res) => {
     // Get the ad data from the request body
     const ad = req.body.ad;
 
-    // Create an ad object and save it to the database
+    // Create an ad object and save it to the lomyvijb_lomy
     const result = await addService.createAd(ad);
 
     // Return the created ad
@@ -28,7 +28,7 @@ router.post("/create", async (req, res) => {
 router.get("/", async (req, res) => {
   // Get all ads
   try {
-    // Get all ads from the database
+    // Get all ads from the lomyvijb_lomy
     const ads = await addService.getAll();
 
     // Return the ads
